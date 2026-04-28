@@ -90,6 +90,9 @@ public class LibraryDao implements BookInterface {
             Logger.getLogger(LibraryDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
+                if (resultSet != null) {
+                    resultSet.close();
+                }
                 if (preparedStatment != null) {
                     preparedStatment.close();
                 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRUDOperations.UpdateBookController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff06" height="83.0" stroke="BLACK" strokeType="INSIDE" width="1215.0" />
+      <Label layoutX="444.0" layoutY="13.0" prefHeight="55.0" prefWidth="505.0" text="Update your book">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="142.0" prefHeight="47.0" prefWidth="343.0" text="BookId">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookId" layoutX="204.0" layoutY="158.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="39.0" layoutY="208.0" prefHeight="47.0" prefWidth="343.0" text="BookTitle">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookTitle" layoutX="214.0" layoutY="222.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="59.0" layoutY="276.0" prefHeight="47.0" prefWidth="343.0" text="Author">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Author" layoutX="212.0" layoutY="289.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="48.0" layoutY="409.0" prefHeight="47.0" prefWidth="343.0" text="category">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="343.0" prefHeight="47.0" prefWidth="343.0" text="publisher">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="publisher" layoutX="212.0" layoutY="359.0" prefHeight="25.0" prefWidth="247.0" />
+      <TextField fx:id="category" layoutX="207.0" layoutY="429.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="59.0" layoutY="476.0" prefHeight="47.0" prefWidth="343.0" text="quantity">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="543.0" prefHeight="47.0" prefWidth="343.0" text="datepublished">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="608.0" prefHeight="47.0" prefWidth="343.0" text="publishedcountry">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantity" layoutX="209.0" layoutY="490.0" prefHeight="25.0" prefWidth="247.0" />
+      <DatePicker fx:id="datepublished" layoutX="252.0" layoutY="557.0" prefHeight="25.0" prefWidth="228.0" />
+      <TextField fx:id="publishedcountry" layoutX="297.0" layoutY="626.0" prefHeight="25.0" prefWidth="247.0" />
+      <Button layoutX="461.0" layoutY="151.0" mnemonicParsing="false" onAction="#ApplyIdAction" prefHeight="4.0" prefWidth="151.0" text="Apply ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1064.0" layoutY="845.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="55.0" prefWidth="151.0" text="Update">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="success" layoutX="59.0" layoutY="673.0" prefHeight="94.0" prefWidth="666.0" text="You successed to update this book">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="failed" layoutX="58.0" layoutY="766.0" prefHeight="94.0" prefWidth="666.0" text="You failed to update this book">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

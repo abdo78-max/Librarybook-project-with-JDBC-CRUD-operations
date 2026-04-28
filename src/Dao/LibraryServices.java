@@ -4,8 +4,6 @@
  */
 package Dao;
 
-import CRUDOperations.BooksTableController;
-import CRUDOperations.SearchBookController;
 import java.util.ArrayList;
 import model.Library;
 
@@ -13,7 +11,7 @@ import model.Library;
  *
  * @author Compu City
  */
-public class LibraryServices {
+public class LibraryServices implements BookInterface{
 
     private LibraryDao libraryDao;
 
@@ -21,6 +19,7 @@ public class LibraryServices {
         libraryDao = new LibraryDao();
     }
 
+    @Override
     public ArrayList<Library> viewBooks() {
         return libraryDao.viewBooks();
     }
@@ -40,6 +39,7 @@ public class LibraryServices {
                 && library.getQuantity() > 0;
     }
 
+    @Override
     public int addBooks(Library library) {
         if (isLibraryValid(library)) {
             return libraryDao.addBooks(library);
@@ -47,20 +47,24 @@ public class LibraryServices {
         return 0;
     }
 
+    @Override
     public Library searchBookWithId(Library library) {
         return libraryDao.searchBookWithId(library);
 
     }
 
+    @Override
     public ArrayList<Library> searchBookByTitleContaining(Library library) {
         return libraryDao.searchBookByTitleContaining(library);
 
     }
 
+    @Override
     public int updateBook(Library library) {
         return libraryDao.updateBook(library);
     }
 
+    @Override
     public int deleteBook(Library library) {
         return libraryDao.deleteBook(library);
 

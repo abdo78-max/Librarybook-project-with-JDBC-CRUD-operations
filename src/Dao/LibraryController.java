@@ -11,7 +11,7 @@ import model.Library;
  *
  * @author Compu City
  */
-public class LibraryController {
+public class LibraryController implements BookInterface{
 
     LibraryServices libraryServices;
 
@@ -19,28 +19,34 @@ public class LibraryController {
         libraryServices = new LibraryServices();
     }
 
+    @Override
     public ArrayList<Library> viewBooks() {
         return libraryServices.viewBooks();
     }
 
+    @Override
     public int addBooks(Library library) {
         return libraryServices.addBooks(library);
     }
 
+    @Override
     public Library searchBookWithId(Library library) {
         return libraryServices.searchBookWithId(library);
 
     }
 
+    @Override
     public ArrayList<Library> searchBookByTitleContaining(Library library) {
         return libraryServices.searchBookByTitleContaining(library);
 
     }
 
+    @Override
     public int updateBook(Library library) {
         return libraryServices.updateBook(library);
     }
 
+    @Override
     public int deleteBook(Library library) {
         return libraryServices.deleteBook(library);
 

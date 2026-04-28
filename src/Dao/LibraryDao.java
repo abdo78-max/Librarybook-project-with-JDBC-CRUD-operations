@@ -20,7 +20,7 @@ import java.util.ArrayList;
  *
  * @author Compu City
  */
-public class LibraryDao {
+public class LibraryDao implements BookInterface {
 
     private Connection connection = null;
     private PreparedStatement preparedStatment = null;
@@ -28,6 +28,7 @@ public class LibraryDao {
     private String sql;
     private int result;
 
+    @Override
     public ArrayList<Library> viewBooks() {
         ArrayList<Library> library = new ArrayList<>();
         connection = (Connection) DatabaseConnection.connect();
@@ -67,6 +68,7 @@ public class LibraryDao {
         return null;
     }
 
+    @Override
     public int addBooks(Library library) {
         connection = (Connection) DatabaseConnection.connect();
         sql = " INSERT INTO librarybook.library(title,Author,publisher,category,quantity,datepublished,publishedcountry)values(?,?,?,?,?,?,?)";
@@ -101,6 +103,7 @@ public class LibraryDao {
         return result;
     }
 
+    @Override
     public Library searchBookWithId(Library library) {
         connection = (Connection) DatabaseConnection.connect();
         sql = "SELECT * FROM librarybook.library where book_id = ?";
@@ -140,6 +143,7 @@ public class LibraryDao {
 
     }
 
+    @Override
     public ArrayList<Library> searchBookByTitleContaining(Library library) {
         ArrayList<Library> list = new ArrayList<>();
         connection = (Connection) DatabaseConnection.connect();
@@ -180,6 +184,7 @@ public class LibraryDao {
         return null;
     }
 
+    @Override
     public int updateBook(Library library) {
         connection = (Connection) DatabaseConnection.connect();
         sql = "UPDATE librarybook.library set title = ?, author = ?, publisher = ?, category = ?, quantity = ?,datepublished =?, publishedcountry=? WHERE book_id = ?";
@@ -211,6 +216,7 @@ public class LibraryDao {
         return result;
     }
 
+    @Override
     public int deleteBook(Library library) {
         connection = (Connection) DatabaseConnection.connect();
         sql = "delete from librarybook.library where book_id=?";

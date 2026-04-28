@@ -31,7 +31,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="failed" layoutX="71.0" layoutY="288.0" prefHeight="40.0" prefWidth="394.0" text="you failed to delete this book">
+      <Label fx:id="failed" layoutX="71.0" layoutY="288.0" prefHeight="40.0" prefWidth="559.0" text="you failed to delete because id is not existed ">
          <font>
             <Font size="24.0" />
          </font>

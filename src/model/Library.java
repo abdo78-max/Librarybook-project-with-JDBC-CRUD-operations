@@ -5,7 +5,6 @@
 package model;
 
 import java.time.LocalDate;
-import javafx.scene.control.TableColumn;
 
 /**
  *

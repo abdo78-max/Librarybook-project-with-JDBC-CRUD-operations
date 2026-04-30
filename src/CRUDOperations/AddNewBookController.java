@@ -54,9 +54,22 @@ public class AddNewBookController implements Initializable {
 
     @FXML
     void saveAction(ActionEvent event) {
+        boolean isNumber = true;
+        String text = quantity.getText();
+        for (int i = 0; i < text.length(); i++) {
+            if (!Character.isDigit(text.charAt(i))) {
+                isNumber = false;
+                break;
+            }
+        }
         if (title.getText().trim().isEmpty() || author.getText().trim().isEmpty() || publisher.getText().trim().isEmpty() || category.getText().trim().isEmpty() || datepublished.getValue() == null || quantity.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "you must enter all fields ");
             return;
+        }
+        if (!isNumber) {
+            JOptionPane.showMessageDialog(null, "you must enter positive number in quantity");
+            return;
+
         }
         LibraryController libraryController = new LibraryController();
         Library library = new Library(title.getText(), author.getText(), publisher.getText(), category.getText(), Integer.parseInt(quantity.getText()), datepublished.getValue(), publishingcountry.getSelectionModel().getSelectedItem());

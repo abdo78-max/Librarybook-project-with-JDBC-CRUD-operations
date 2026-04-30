@@ -97,6 +97,19 @@ public class UpdateBookController implements Initializable {
             JOptionPane.showMessageDialog(null, "you must enter positive value");
             return;
         }
+        boolean isNumber = true;
+        String text = quantity.getText();
+        for (int i = 0; i < text.length(); i++) {
+            if (!Character.isDigit(text.charAt(i))) {
+                isNumber = false;
+                break;
+            }
+        }
+        if (!isNumber) {
+            JOptionPane.showMessageDialog(null, "you must enter positive number in quantity");
+            return;
+
+        }
         Library library = new Library(bookTitle.getText(), Author.getText(), publisher.getText(), category.getText(), Integer.parseInt(quantity.getText()), datepublished.getValue(), publishedcountry.getText());
         LibraryController libraryController = new LibraryController();
         library.setBookNumber(Integer.parseInt(bookId.getText()));

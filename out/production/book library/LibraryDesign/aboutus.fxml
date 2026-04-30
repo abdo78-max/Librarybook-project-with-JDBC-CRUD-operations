@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRUDOperations.AboutUsController">
+   <children>
+      <Label fx:id="sentence" layoutX="-2.0" layoutY="38.0" prefHeight="253.0" prefWidth="569.0" text="&quot;Our library is a gateway to infinite worlds, where every shelf holds a new discovery and every page offers a chance to learn, grow, and connect with the stories that shape our community.&quot;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="811.0" fitWidth="686.0" layoutX="-4.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1760585007873.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="118.0" layoutX="-4.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="586.0" />
+      <Label layoutX="192.0" layoutY="30.0" prefHeight="17.0" prefWidth="194.0" text="about us">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
